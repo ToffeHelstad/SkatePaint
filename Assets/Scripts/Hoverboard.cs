@@ -33,12 +33,14 @@ public class Hoverboard : MonoBehaviour
         for (int i = 0; i < 4; i++)
             ApplyForce(anchors[i], hits[i]);
 
-        hb.AddForce(Input.GetAxis("Vertical") * moveForce * transform.forward);
+        //hb.AddForce(Input.GetAxis("Vertical") * moveForce * transform.forward);
         hb.AddTorque(Input.GetAxis("Horizontal") * turnTorque * transform.up);
 
         if (Input.GetButton("Jump"))
         {
-            hb.AddForce(transform.up * jumpForce);
+            //hb.AddForce(transform.up * jumpForce);
+            //hb.AddForce(Input.GetAxis("Vertical") * moveForce * transform.forward);
+            hb.AddForce(transform.forward*moveForce);
         }
 
 
