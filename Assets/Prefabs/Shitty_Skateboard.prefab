@@ -186,7 +186,7 @@ Transform:
   m_GameObject: {fileID: 5420542144937351408}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: -0.000000029802322, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.32894, y: 0.8, z: 0.036027577}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -274,8 +274,8 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 7852493220054308239}
   - {fileID: 4130785059487906652}
+  - {fileID: 7852493220054308239}
   - {fileID: 1744386883119716956}
   - {fileID: 2202364783393466211}
   - {fileID: 1850122402}
@@ -294,14 +294,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c84beffa29c7048b3c8fc3b03164f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   gravityMultiplier: 1
   jumpHeight: 20
   isGrounded: 0
+  spacePressed: 0
   groundCheck: {fileID: 1850122402}
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  jumpKey: 0
   multiplier: 2.4
   moveForce: 15
   turnTorque: 4
