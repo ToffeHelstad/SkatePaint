@@ -5,16 +5,16 @@ using UnityEngine;
 public class Hoverboard : MonoBehaviour
 {
     Rigidbody hb;
+    public Animator anim;
 
     private float gravityConstant = -9.71f;
     public float gravityMultiplier = 1f;
     public float jumpHeight;
 
     public bool isGrounded;
+    public bool spacePressed;
     public Transform groundCheck;
     public LayerMask groundLayer;
-
-    public int jumpKey;
 
     private Vector3 velocity;
     void Start()
@@ -33,16 +33,8 @@ public class Hoverboard : MonoBehaviour
         for (int i = 0; i < 4; i++)
             ApplyForce(anchors[i], hits[i]);
 
-        //hb.AddForce(Input.GetAxis("Vertical") * moveForce * transform.forward);
+        hb.AddForce(Input.GetAxis("Vertical") * moveForce * transform.forward);
         hb.AddTorque(Input.GetAxis("Horizontal") * turnTorque * transform.up);
-
-        if (Input.GetButton("Jump"))
-        {
-            //hb.AddForce(transform.up * jumpForce);
-            //hb.AddForce(Input.GetAxis("Vertical") * moveForce * transform.forward);
-            hb.AddForce(transform.forward*moveForce);
-        }
-
 
     }
 
@@ -50,6 +42,19 @@ public class Hoverboard : MonoBehaviour
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, 0.4f, groundLayer);
+
+        if (Input.GetKey(KeyCode.Space) && isGrounded)
+        {
+            //hb.AddForce(Input.GetAxis("Vertical") * moveForce * transform.forward);
+            //hb.AddForce(transform.forward*moveForce);
+        }
+        else if (Input.GetKeyUp(KeyCode.Space) && isGrounded)
+            Ollie();
+
+        if(!isGrounded && Input.GetKeyDown(KeyCode.E))
+        {
+            KickFlip();
+        }
 
     }
     
@@ -65,11 +70,14 @@ public class Hoverboard : MonoBehaviour
     void Ollie()
     {
         Debug.Log("Ollie");
-;        //jumpYPos = transform.position.y;
-        //velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravityConstant * gravityMultiplier);
-
-
+        hb.AddForce(transform.up * jumpForce);
     }
+
+    void KickFlip()
+    {
+        anim.SetTrigger("Kickflip");
+    }
+
 
 
 
