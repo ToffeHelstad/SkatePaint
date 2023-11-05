@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 3172aa893548e8f4290e47a96ab4b6cb
+  - enabled: 1
+    path: Assets/Scenes/Skatepark.unity
+    guid: c2722a114dd56f345ab04ceaa1303083
   m_configObjects: {}
