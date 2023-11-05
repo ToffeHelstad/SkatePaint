@@ -14,8 +14,6 @@ public class Hoverboard : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
 
-    public int jumpKey;
-
     private Vector3 velocity;
     void Start()
     {
@@ -33,14 +31,14 @@ public class Hoverboard : MonoBehaviour
         for (int i = 0; i < 4; i++)
             ApplyForce(anchors[i], hits[i]);
 
-        //hb.AddForce(Input.GetAxis("Vertical") * moveForce * transform.forward);
+        hb.AddForce(Input.GetAxis("Vertical") * moveForce * transform.forward);
         hb.AddTorque(Input.GetAxis("Horizontal") * turnTorque * transform.up);
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
-            //hb.AddForce(transform.up * jumpForce);
+            hb.AddForce(transform.up * jumpForce);
             //hb.AddForce(Input.GetAxis("Vertical") * moveForce * transform.forward);
-            hb.AddForce(transform.forward*moveForce);
+            //hb.AddForce(transform.forward*moveForce);
         }
 
 
