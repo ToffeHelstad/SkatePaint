@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material 1
+  m_Name: New Material 5
   m_Shader: {fileID: 4800000, guid: e88aeddd2ef1f934d805981244872e27, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -135,7 +135,7 @@ Material:
     - _AlphaClip: 0
     - _Blend: 0
     - _BrushLowerCut: 0
-    - _BrushSize: 1.01
+    - _BrushSize: 1.1
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
@@ -160,8 +160,8 @@ Material:
     - _HairSpecNoiseStrength: 1
     - _HairSpecularSize: 0.8
     - _HairSpecularSmoothness: 0.1
-    - _HalfToneDiffuseStep: 0.08
-    - _HalfToneEnabled: 0
+    - _HalfToneDiffuseStep: 0.31
+    - _HalfToneEnabled: 1
     - _HalfToneIncludeReceivedShadow: 0
     - _HalfToneShape: 1
     - _HalfToneUvMode: 1
@@ -172,7 +172,7 @@ Material:
     - _HalftoneNoiseClip: 0.3
     - _HalftoneScale: 0
     - _HalftoneSize: 0.3
-    - _HalftoneTilling: 27.64
+    - _HalftoneTilling: 9.49
     - _HalftoneUseScreenSpaceUV: 0
     - _HatchingDensity: 1
     - _HatchingDiffuseOffset: 0
@@ -187,7 +187,7 @@ Material:
     - _OcclusionStrength: 1
     - _OutlineEnabled: 1
     - _OutlineMode: 0
-    - _OutlineWidth: 5.33
+    - _OutlineWidth: 7.07
     - _OverrideShadowColor: 0
     - _Parallax: 0.02
     - _QueueControl: -1
@@ -202,14 +202,14 @@ Material:
     - _SPECULARHIGHTLIGHTS: 0
     - _ShadowPatternSize: 0.3
     - _Shininess: 0
-    - _SizeFalloff: 0.445
+    - _SizeFalloff: 0.433
     - _Smoothness: 0.5
     - _SmoothnessSource: 0
     - _SmoothnessTextureChannel: 0
     - _SpecClipMaskScale: 1
     - _SpecColor_1: 0.1
     - _SpecFalloff: 0
-    - _SpecShadowStrength: 1
+    - _SpecShadowStrength: 0
     - _SpecShadowStrenth: 1
     - _SpecSource: 0
     - _SpecularClipStrength: 0
@@ -232,20 +232,20 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.6792453, g: 0.5594962, b: 0.45817018, a: 1}
+    - _BaseColor: {r: 0.9245283, g: 0.6189768, b: 0.23985407, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FaceFrontDirection: {r: 0, g: 0, b: 1, a: 0}
     - _FaceRightDirection: {r: 1, g: 0, b: 0, a: 0}
     - _HairSpecColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HalfToneColor: {r: 0, g: 0, b: 0, a: 0.612}
+    - _HalfToneColor: {r: 1, g: 0, b: 0, a: 0.928}
     - _HalftoneColor: {r: 0.5176471, g: 0.5176471, b: 0.5176471, a: 1}
     - _HatchingColor: {r: 0, g: 0, b: 0, a: 1}
     - _HatchingScale: {r: 15, g: 1, b: 0, a: 0}
-    - _OutlineColor: {r: 0.5943396, g: 0.37629035, b: 0.15979885, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineDistancFade: {r: -69.137924, g: 5.862076, b: 0, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ShadowColor: {r: 0, g: 0, b: 0, a: 0.119}
+    - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
     - _SpherizeNormalOrigin: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
